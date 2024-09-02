@@ -28,12 +28,6 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
-	{
-		'nvim-telescope/telescope.nvim',
-		tag = '0.1.8',
-		-- or use branch = '0.1.x' if you want to use the latest stable branch
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
 	-- colorscheme that will be used when installing plugins.
 	install = { colorscheme = { "habamax" } },
 	-- automatically check for plugin updates
@@ -42,9 +36,3 @@ require("lazy").setup({
 vim.cmd("colorscheme habamax")
 vim.keymap.set("n", "<leader>x", vim.cmd.Ex)
 
--- telescope keymaps
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
