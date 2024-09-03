@@ -15,7 +15,7 @@ return {
 		build = ":TSUpdate",
 		config = function () 
 			local configs = require("nvim-treesitter.configs")
-			ensure_installed = { "lua", "go", "vim", "vimdoc", "query", "javascript", "html" }
+			ensure_installed = { "lua", "python", "go", "vim", "vimdoc", "query", "javascript", "html" }
 			sync_install = false
 			highlight = { enable = true }
 			indent = { enable = true }
