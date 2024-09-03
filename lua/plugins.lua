@@ -10,4 +10,15 @@ return {
 			vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 		end,
 	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function () 
+			local configs = require("nvim-treesitter.configs")
+			ensure_installed = { "lua", "go", "vim", "vimdoc", "query", "javascript", "html" }
+			sync_install = false
+			highlight = { enable = true }
+			indent = { enable = true }
+		end,
+	},
 }
